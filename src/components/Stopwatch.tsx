@@ -10,7 +10,7 @@ const Stopwatch: FC = () => {
   const start = () => {
     if (!run) {
       setRun(true);
-      timerRef.current = window.setInterval(() => {
+      timerRef.current = setInterval(() => {
         setSeconds((prevSeconds) => {
           if (prevSeconds === 59) {
             setMinutes((prevMinutes) => {
